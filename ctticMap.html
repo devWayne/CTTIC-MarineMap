@@ -6,18 +6,18 @@
     <script>
 
         $(function(){
-            var  z=1;
-            alert("height"+$(window).height()); //浏览器时下窗口可视区域高度
-            alert("width"+$(window).width()); //浏览器时下窗口可视区域宽度
+            var  z=2;
+         /*   alert("height"+$(window).height()); //浏览器时下窗口可视区域高度
+            alert("width"+$(window).width()); //浏览器时下窗口可视区域宽度*/
             var height=$(window).height(); //浏览器时下窗口可视区域高度
             var width=$(window).width(); //浏览器时下窗口可视区域宽度
             var h=Math.round(height/256);
             var w=Math.round(width/256);
-            for(var i=0;i<h;i++){
-                for(var j=0;j<w;j++){
+            for(var i=0;i<4;i++){
+                for(var j=0;j<4;j++){
 
-                    var image="<img id='"+i+"'src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x="+j+"&y="+i+"&z="+z+"'>";
-                    $(document.body).append(image);
+                    var image="<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x="+j+"&y="+i+"&z="+z+"'>";
+                    $("#pic"+i+"_"+j).append(image);
                 }
                 $(document.body).append("<div></div>");
             }
@@ -69,5 +69,24 @@
 
 
         <div><input id="up" type="button" value="up"/><input id="down" type="button" value="down"/></div>
+        <div>
+            <table border rules=none cellspacing=0 style="width:75%;height:75%;frame=hsides" >
+                <tr style="padding: 0px;">
+                    <td id="pic1_1" style="width:25%;height:25%;padding: 0px;"></td>
+                    <td id="pic1_2" style="width:25%;height:25%;padding: 0px;"></td>
+                    <td id="pic1_3" style="width:25%;height:25%;padding: 0px;"></td>
+                </tr>
+               <tr style="padding: 0px;">
+                   <td id="pic2_1" style="width:25%;height:25%;padding: 0px;"></td>
+                   <td id="pic2_2" style="width:25%;height:25%;padding: 0px;"></td>
+                   <td id="pic2_3" style="width:25%;height:25%;padding: 0px;"></td>
+                </tr>
+                <tr style="padding: 0px;">
+                    <td id="pic3_1" style="width:25%;height:25%;padding: 0px;"></td>
+                    <td id="pic3_2" style="width:25%;height:25%;padding: 0px;"></td>
+                    <td id="pic3_3" style="width:25%;height:25%;padding: 0px;"></td>
+                </tr>
+
+            </table>      </div>
 </body>
 </html>
