@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c6ef45-bae1-4ec0-9ac3-e30e834b3d2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ctticMap.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ctticMap.html" afterPath="$PROJECT_DIR$/ctticMap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ctticMap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +30,29 @@
       <file leaf-file-name="ctticMap.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ctticMap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="151" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.30959302" vertical-offset="414" max-vertical-offset="1843">
+            <state line="59" column="37" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.6686047" vertical-offset="661" max-vertical-offset="2888">
               <folding>
-                <marker date="1393479841003" expanded="false" signature="727:749" placeholder="..." />
+                <marker date="1393492044570" expanded="true" signature="1433:1455" placeholder="..." />
+                <marker date="1393492044570" expanded="true" signature="1959:1981" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTML5.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2042" column="15" selection-start="36172" selection-end="36172" vertical-scroll-proportion="0.0" vertical-offset="38408" max-vertical-offset="41268">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,6 +70,15 @@
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/javascript/map.js" />
+        <option value="$PROJECT_DIR$/ctticMap.html" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -105,6 +129,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ctticMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctticMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctticMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctticMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctticMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -192,11 +244,33 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="904" column="17" selection-start="11337" selection-end="11337" vertical-scroll-proportion="1.6443812" vertical-offset="16020" max-vertical-offset="135337">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2042" column="15" selection-start="36172" selection-end="36172" vertical-scroll-proportion="0.0" vertical-offset="38408" max-vertical-offset="41268">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ctticMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="151" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.30959302" vertical-offset="414" max-vertical-offset="1843">
+        <state line="59" column="37" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.6686047" vertical-offset="661" max-vertical-offset="2888">
           <folding>
-            <marker date="1393479841003" expanded="false" signature="727:749" placeholder="..." />
+            <marker date="1393492044570" expanded="true" signature="1433:1455" placeholder="..." />
+            <marker date="1393492044570" expanded="true" signature="1959:1981" placeholder="..." />
           </folding>
         </state>
       </provider>
