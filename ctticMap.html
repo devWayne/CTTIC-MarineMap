@@ -43,6 +43,11 @@
         var width = $(window).width(); //浏览器时下窗口可视区域宽度
         var h = Math.round(height / 256);
         var w = Math.round(width / 256);*/
+
+
+        /*
+                初始化地图，缩放比列为3
+        */
         for (var i = 0; i < 4; i++) {
             for (var j = 0; j < 4; j++) {
                 x=j;
@@ -54,6 +59,9 @@
         }
 
 
+        /*
+              单击触发放大事件，缩放比例+1
+         */
         $(window).bind("click",function(){
             z=z+1;
             var _x=Number((Math.pow(2,(z-1)))/2-2+right-left);
@@ -76,25 +84,36 @@
         });
 
 
-
+        /*
+                          键盘触发事件
+         */
         $(window).keydown(function(event){
 
-                        if(event.which == 68)      //13等于回车键(Enter)键值,ctrlKey 等于 Ctrl
+                        //键盘“D”，触发地图向右移动事件
+                        if(event.which == 68)
                         {
                             right++;movemap();
                         }
+
+                        //键盘“A”，触发地图向左移动事件
                         if(event.which == 65)
                         {
                             left++;movemap();
                         }
+
+                        //键盘“W”，触发地图向上移动事件
                         if(event.which == 87)
                         {
                             up++;movemap();
                         }
+
+                        //键盘“S”，触发地图向下移动事件
                         if(event.which == 83)
                         {
                             down++;movemap();
                         }
+
+                        //键盘“Q”，触发地图缩小事件，缩放比列-1
                         if(event.which == 81)
                         {
                             z=z-1;
@@ -117,6 +136,7 @@
                             $("#getz").attr("value",z);
                         }
 
+                        //移动后刷新地图
                         function movemap(){
                             var _x=x;
                             var _y=y;
