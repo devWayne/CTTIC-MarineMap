@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ctticMap.iml" filepath="$PROJECT_DIR$/.idea/ctticMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CTTIC-MarineMap.iml" filepath="$PROJECT_DIR$/.idea/CTTIC-MarineMap.iml" />
     </modules>
   </component>
 </project>
