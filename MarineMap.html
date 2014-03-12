@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -24,8 +24,8 @@
 <body>
 
 <script>
-    var x;
-    var y;
+    var x=2;
+    var y=2;
     var z = 2;
     var left=0;
     var right=0;
@@ -48,38 +48,59 @@
         /*
                 初始化地图，缩放比列为3
         */
+    var x1;
+    var y1;
         for (var i = 0; i < 4; i++) {
             for (var j = 0; j < 4; j++) {
-                x=j;
-                y=i;
-                var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x + "&y=" + y + "&z=" + z + "'>";
+                x1=j+y-2;
+                y1=x+i-2;
+                var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x1 + "&y=" + y1 + "&z=" + z + "'>";
                 $("#pic" + i + "_" + j).append(image);
                 //$("#pic" + i + "_" + j).click(big());
             }
         }
+
+        var p=10;
 
 
         /*
               单击触发放大事件，缩放比例+1
          */
         $(window).bind("click",function(){
-            z=z+1;
-            var _x=Number((Math.pow(2,(z-1)))/2-2+right-left);
-            var _y=Number((Math.pow(2,(z-1)))/2-2-up+down);
+            p=p+10;
+            $("#zoom").css("width",p+"%");
+            if(p>0 && p<90){
+                var xt;
+                var yt;
+
+                z=z+1;
+                x=x*2;
+                y=y*2;
+                xt=x;
+                yt=y;
+
             for (var i =0; i < 4; i++) {
                 for (var j = 0; j < 4; j++) {
-                    x=_x+j;
-                    y=_y+i;
+                  xt =x-2+j;
+                   yt=y-2+i;
+
                     $("#pic" + i + "_" + j).empty();
-                    var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +x+ "&y=" +y+ "&z=" + z + "'>";
+                    var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
                     $("#pic" + i + "_" + j).append(image);
                     //$("#pic" + i + "_" + j).click(big());
                 }
             }
-            x=x-4;
-            y=y-4;
-            $("#getx").attr("value",x/2);
-            $("#gety").attr("value",y/2);
+
+
+            }
+            else
+            {
+                p=80;
+                $("#zoom").css("width",p+"%");
+            }
+
+            $("#getx").attr("value",x);
+            $("#gety").attr("value",y);
             $("#getz").attr("value",z);
         });
 
@@ -116,45 +137,69 @@
                         //键盘“Q”，触发地图缩小事件，缩放比列-1
                         if(event.which == 81)
                         {
-                            z=z-1;
-                            var _x=Number((Math.pow(2,(z-1)))/2-2+right-left);
-                            var _y=Number((Math.pow(2,(z-1)))/2-2-up+down);
+                            p=p-10;
+                            $("#zoom").css("width",p+"%");
+                            if(p>0 && p<90){
+                                var xt;
+                                var yt;
+                                xt=x;
+                                yt=y;
+                                  z=z-1;
+                                x=parseInt(x/2);
+                                y=parseInt(y/2);
+
                             for (var i =0; i < 4; i++) {
                                 for (var j = 0; j < 4; j++) {
-                                    x=_x+j;
-                                    y=_y+i;
+                                   xt=x+j-2;
+                                    yt=y+i-2;
+
                                     $("#pic" + i + "_" + j).empty();
-                                    var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +x+ "&y=" +y+ "&z=" + z + "'>";
+                                    var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
                                     $("#pic" + i + "_" + j).append(image);
+                                   // $("#pic" + i + "_" + j).fadeIn(500);
                                     //$("#pic" + i + "_" + j).click(big());
                                 }
                             }
-                            x=x-4;
-                            y=y-4;
-                            $("#getx").attr("value",x/2);
-                            $("#gety").attr("value",y/2);
+
+
+                          }
+                             else
+                            {
+                                p=10;
+                                $("#zoom").css("width",p+"%");
+                            }
+                            $("#getx").attr("value",x);
+                            $("#gety").attr("value",y);
                             $("#getz").attr("value",z);
                         }
 
                         //移动后刷新地图
                         function movemap(){
-                            var _x=x;
-                            var _y=y;
+                             x=x+right-left;
+                             y=y-up+down;
+                            var yt;
+                            var xt;
                                          for (var i = 0; i < 4; i++) {
                                              for (var j = 0; j < 4; j++) {
-                                                 x=_x+right-left+j;
-                                                 y=_y-up+down+i;
+                                                 xt=x+j-2;
+                                                 yt=y+i-2;
                                                  $("#pic" + i + "_" + j).empty();
-                                                 var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x + "&y=" + y + "&z=" + z + "'>";
+                                                 var image = "<img style='width:100%;height:100%;' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + xt + "&y=" + yt + "&z=" + z + "'>";
                                                  $("#pic" + i + "_" + j).append(image);
+                                                // $("#img" + i + "_" + j).fadeIn(500);
                                                  //$("#pic" + i + "_" + j).click(big());
                                              }
                                          }
-                            $("#getx").attr("value",x/2);
-                            $("#gety").attr("value",y/2);
+                            left=0;
+                            right=0;
+                            up=0;
+                            down=0;
+
+                            $("#getx").attr("value",x);
+                            $("#gety").attr("value",y);
                             $("#getz").attr("value",z);
-                            x=_x;
-                            y=_y;
+
+
                             }
 
          });
@@ -170,27 +215,33 @@
 
 </script>
 
-        <div class="row" id="pic">
+
+
+
+
+
+
+
+<div class="panel panel-default col-md-2">
+
+    <div class="panel-footer">
+        X point :<input type="text" id="getx" value="0" disabled="disabled">
+    </div>
+    <div class="panel-footer">
+        Y point :<input type="text" id="gety" value="0" disabled="disabled">
+    </div>
+    <div class="panel-footer">
+        Zoom&nbsp;&nbsp; :<input type="text" id="getz" value="0" disabled="disabled">
+    </div>
+</div>
+<div class="container">
+         <div class="row" id="pic">
             <div id="pic0_0" class="col-md-2"> </div>
             <div id="pic0_1" class="col-md-2"> </div>
             <div id="pic0_2" class="col-md-2"> </div>.
             <div id="pic0_3" class="col-md-2"> </div>
-            <div class="panel panel-default col-md-2">
-                <div class="panel-body">
-                              Position Now      </div>
-                <div class="panel-footer">
-                   X point :<input type="text" id="getx" value="0" disabled="disabled">
-                </div>
-                <div class="panel-footer">
-                   Y point :<input type="text" id="gety" value="0" disabled="disabled">
-                </div>
-                <div class="panel-footer">
-                   Zoom&nbsp;&nbsp; :<input type="text" id="getz" value="0" disabled="disabled">
-                </div>
-            </div>
-
         </div>
-        <div class="row">
+         <div class="row">
             <div id="pic1_0" class="col-md-2"> </div>
             <div id="pic1_1" class="col-md-2"> </div>
             <div id="pic1_2" class="col-md-2"> </div>
@@ -208,6 +259,12 @@
             <div id="pic3_2" class="col-md-2"> </div>
             <div id="pic3_3" class="col-md-2"> </div>
         </div>
+    <div class="progress">
+        <div id="zoom" class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="2" aria-valuemax="9" style="width: 10%;">
+                  放大倍数       <span class="sr-only">60% Complete</span>
+        </div>
+    </div>
 
+</div>
 </body>
 </html>
