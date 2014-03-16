@@ -1,0 +1,6 @@
+
+#contral{ position: absolute;z-index:10; left:100px; top:100px;}
+#contral img{ width:auto; margin:auto; cursor:auto; width:20px; border:0px;}
+#contral ul{width: 120px;}
+#contral li{width:26px; height:26px; float:left; list-style:none;}
+.pic{width:200px; height:200px;}

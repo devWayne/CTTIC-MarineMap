@@ -1,0 +1,37 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>判断鼠标移动</title>
+</head>
+<script language="javascript">
+    var sx=event.x                          //声明两个变量存放鼠标X,Y坐标
+    var sy=event.y
+    function aa(){
+        if(sx==event.x){
+            zc.innerHTML="鼠标X轴没有移动 "                  //对鼠标X轴进行判断
+        }else if(sx>event.x){
+            zc.innerHTML="鼠标X轴左移 "
+        }else if(sx<event.x){
+            zc.innerHTML="鼠标X轴右移 "
+        }
+
+        if(sy==event.y){
+            zz.innerHTML="鼠标Y轴没有移动 "
+        }else if(sy>event.y){
+            zz.innerHTML="鼠标Y轴上移 "                     //对鼠标Y轴进行判断
+        }else if(sy<event.y){
+            zz.innerHTML="鼠标Y轴下移 "
+        }
+        sx=event.x
+        sy=event.y                                         //重新赋值
+    }
+</script>
+<body onMouseMove="aa()">                <!--鼠标移动时调用函数-->
+<span id="zc"> </span>
+<span id="zz"></span>
+<br/>
+<br/>
+<br/>
+<br/>
+鼠标放在页面上移动
+</body>
+</html>
