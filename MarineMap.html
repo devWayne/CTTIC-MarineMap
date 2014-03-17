@@ -20,47 +20,49 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="javascript/bootstrap.js"></script>
     <script src="javascript/map.js"></script>
-    <script src="javascript/position.js"></script>
+  <!--  <script src="javascript/position.js"></script>-->
     <title>China Marine Map</title>
 </head>
 <body>
-
-
-
-
-
-<div class="container" id="mymap">
-
+<div class="logo"><h1>China Marine Map</h1></div>
     <div id="contral">
-        <ul>
-            <li></li>
-            <li><img src="images/up.gif" onClick="clickMove('up')" title="UP"></li>
-            <li></li>
-            <li><img src="images/left.gif" onClick="clickMove('left')" title="LEFT"></li>
-            <li><img src="images/zoom.gif" onClick="realsize();" title="FULL SIZE"></li>
-            <li><img src="images/right.gif" onClick="clickMove('right')" title="RIGHT"></li>
+    <ul>
+        <li></li>
+        <li><img src="images/up.gif" onClick="goup()" title="UP"></li>
+        <li></li>
+        <li><img src="images/left.gif" onClick="goleft()" title="LEFT"></li>
+        <li><img src="images/zoom.gif" onclick=""  title="FULL SIZE"></li>
+        <li><img src="images/right.gif" onClick="goright();" title="RIGHT"></li>
 
-            <li></li>
-            <li><img src="images/down.gif" onClick="clickMove('down')" title="DOWN"></li>
-            <li></li>
-            <li></li>
-            <li><img src="images/zoom_in.gif" onClick="bigit();" title="ZOOM IN"></li>
-            <li></li>
-            <li></li>
-            <li><img src="images/zoom_out.gif" onClick="smallit();" title="ZOOM OUT"></li>
-            <li></li>
+        <li></li>
+        <li><img src="images/down.gif" onClick="godown();" title="DOWN"></li>
+        <li></li>
+        <li></li>
+        <li><img src="images/zoom_in.gif"  onClick="zoomin();" title="ZOOM IN"></li>
+        <li></li>
+        <li></li>
+        <li><img src="images/zoom_out.gif"  onClick="zoomout();" title="ZOOM OUT"></li>
+        <li></li>
 
-        </ul>
-    </div>
+    </ul>
+</div>
+
+
+
+
+<div class="local" id="mymap">
+
 
     <div class="row" id="tag1">
             <div id="pic0_0" class="col-md-2 pic"> </div>
             <div id="pic0_1" class="col-md-2 pic"> </div>
-            <div id="pic0_2" class="col-md-2 pic"> </div>.
+            <div id="pic0_2" class="col-md-2 pic"> </div>
             <div id="pic0_3" class="col-md-2 pic"> </div>
             <div id="pic0_4" class="col-md-2 pic"> </div>
             <div id="pic0_5" class="col-md-2 pic"> </div>
             <div id="pic0_6" class="col-md-2 pic"> </div>
+            <div id="pic0_7" class="col-md-2 pic"> </div>
+            <div id="pic0_8" class="col-md-2 pic"> </div>
     </div>
          <div class="row">
             <div id="pic1_0" class="col-md-2 pic"> </div>
@@ -70,6 +72,8 @@
              <div id="pic1_4" class="col-md-2 pic"> </div>
              <div id="pic1_5" class="col-md-2 pic"> </div>
              <div id="pic1_6" class="col-md-2 pic"> </div>
+             <div id="pic1_7" class="col-md-2 pic"> </div>
+             <div id="pic1_8" class="col-md-2 pic"> </div>
         </div>
         <div class="row">
             <div id="pic2_0" class="col-md-2 pic"> </div>
@@ -78,7 +82,9 @@
             <div id="pic2_3" class="col-md-2 pic"> </div>
             <div id="pic2_4" class="col-md-2 pic"> </div>
             <div id="pic2_5" class="col-md-2 pic"> </div>
-            <div id="pic2_6" class="col-md-2 pic"> </div>
+            <div id="pic2_6" class="col-md-2 pic"></div>
+            <div id="pic2_7" class="col-md-2 pic"> </div>
+            <div id="pic2_8" class="col-md-2 pic"> </div>
         </div>
         <div class="row">
             <div id="pic3_0" class="col-md-2 pic"> </div>
@@ -88,6 +94,8 @@
             <div id="pic3_4" class="col-md-2 pic"> </div>
             <div id="pic3_5" class="col-md-2 pic"> </div>
             <div id="pic3_6" class="col-md-2 pic"> </div>
+            <div id="pic3_7" class="col-md-2 pic"> </div>
+            <div id="pic3_8" class="col-md-2 pic"> </div>
         </div>
         <div class="row">
             <div id="pic4_0" class="col-md-2 pic"> </div>
@@ -97,6 +105,8 @@
             <div id="pic4_4" class="col-md-2 pic"> </div>
             <div id="pic4_5" class="col-md-2 pic"> </div>
             <div id="pic4_6" class="col-md-2 pic"> </div>
+            <div id="pic4_7" class="col-md-2 pic"> </div>
+            <div id="pic4_8" class="col-md-2 pic"> </div>
         </div>
 </div>
 <canvas id="canvas" class="transparent" width="500" height="500">
