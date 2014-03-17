@@ -1,37 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>判断鼠标移动</title>
+    <title> </title>
+    <meta http-equiv="content-type" c />
+    <style type="text/css" media="all">
+        #Div_CnLei {border:1px solid #ccc;background:#eee;line-height:100px;text-align:center;position:absolute; z-index:1;}
+    </style>
 </head>
-<script language="javascript">
-    var sx=event.x                          //声明两个变量存放鼠标X,Y坐标
-    var sy=event.y
-    function aa(){
-        if(sx==event.x){
-            zc.innerHTML="鼠标X轴没有移动 "                  //对鼠标X轴进行判断
-        }else if(sx>event.x){
-            zc.innerHTML="鼠标X轴左移 "
-        }else if(sx<event.x){
-            zc.innerHTML="鼠标X轴右移 "
-        }
+<body>
+<div id="Div_CnLei"   style="width:200px; height:100px; top:0px; left:0px;"></div>
 
-        if(sy==event.y){
-            zz.innerHTML="鼠标Y轴没有移动 "
-        }else if(sy>event.y){
-            zz.innerHTML="鼠标Y轴上移 "                     //对鼠标Y轴进行判断
-        }else if(sy<event.y){
-            zz.innerHTML="鼠标Y轴下移 "
-        }
-        sx=event.x
-        sy=event.y                                         //重新赋值
+<script type="text/javascript">
+    var w3c=(document.getElementById)? true: false;
+    var agt=navigator.userAgent.toLowerCase();
+    var allowDrag=false;
+    var chax;
+    var chay;
+    var ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1) && (agt.indexOf("omniweb") == -1));
+
+    function IeTrueBody(){
+        return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
     }
+
+    function allow()
+    {
+        var curX=event.clientX+IeTrueBody().scrollLeft;
+        var curY=event.clientY+IeTrueBody().scrollTop;
+
+        chax=parseInt(curX)-parseInt(document.getElementById("Div_CnLei").style.left);
+        chay=parseInt(curY)-parseInt(document.getElementById("Div_CnLei").style.top);
+        allowDrag=true;
+
+    }
+
+    function unallow()
+    {
+        allowDrag=false;
+    }
+
+
+    function getMousePos(e){
+        var curX=(!ie)?e.pageX : event.clientX+IeTrueBody().scrollLeft;
+        var curY=(!ie)?e.pageY : event.clientY+IeTrueBody().scrollTop;
+        if(allowDrag)
+        {
+            tag=document.getElementById("Div_CnLei");
+            tag.style.left=(curX-chax)+"px";
+            tag.style.top=(curY-chay)+"px";
+        }
+    }
+    document.body;
 </script>
-<body onMouseMove="aa()">                <!--鼠标移动时调用函数-->
-<span id="zc"> </span>
-<span id="zz"></span>
-<br/>
-<br/>
-<br/>
-<br/>
-鼠标放在页面上移动
 </body>
 </html>

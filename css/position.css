@@ -1,0 +1,6 @@
+.transparent{
+    position: absolute;z-index:2;left:30%; top:30%;
+    filter:alpha(opacity=85);  /*支持 IE 浏览器*/
+    -moz-opacity:0.85; /*支持 FireFox 浏览器*/
+    opacity:0.85;  /*支持 Chrome, Opera, Safari 等浏览器*/
+}

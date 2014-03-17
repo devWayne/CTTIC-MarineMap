@@ -1,6 +1,6 @@
-var x=2;
-var y=2;
-var z = 2;
+var x=3;
+var y=3;
+var z = 3;
 var left=0;
 var right=0;
 var up=0;
@@ -25,10 +25,10 @@ $(function () {
      */
     var x1;
     var y1;
-    for (var i = 0; i < 4; i++) {
-        for (var j = 0; j < 4; j++) {
-            x1=j+y-2;
-            y1=x+i-2;
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 7; j++) {
+            x1=j+x-3;
+            y1=y+i-2;
             var image = "<img  style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x1 + "&y=" + y1 + "&z=" + z + "'>";
             $("#pic" + i + "_" + j).append(image);
             //$("#pic" + i + "_" + j).click(big());
@@ -38,9 +38,10 @@ $(function () {
     var p=10;
 
 /*
-     单击触发放大事件，缩放比例+1*/
+     单击触发放大事件，缩放比例+1
+*/
 
-       /* $(window).bind("click",function(){
+        $(window).bind("click",function(){
             p=p+10;
             $("#zoom").css("width",p+"%");
             if(p>0 && p<90){
@@ -53,9 +54,9 @@ $(function () {
                 xt=x;
                 yt=y;
 
-                for (var i =0; i < 4; i++) {
-                    for (var j = 0; j < 4; j++) {
-                        xt =x-2+j;
+                for (var i =0; i < 5; i++) {
+                    for (var j = 0; j < 7; j++) {
+                        xt =x-3+j;
                         yt=y-2+i;
 
                         $("#pic" + i + "_" + j).empty();
@@ -76,7 +77,7 @@ $(function () {
             $("#getx").attr("value",x);
             $("#gety").attr("value",y);
             $("#getz").attr("value",z);
-        });*/
+        });
 
     /*
      键盘触发事件
@@ -122,9 +123,9 @@ $(function () {
                 x=parseInt(x/2);
                 y=parseInt(y/2);
 
-                for (var i =0; i < 4; i++) {
-                    for (var j = 0; j < 4; j++) {
-                        xt=x+j-2;
+                for (var i =0; i < 5; i++) {
+                    for (var j = 0; j < 7; j++) {
+                        xt=x+j-3;
                         yt=y+i-2;
 
                         $("#pic" + i + "_" + j).empty();
@@ -163,8 +164,8 @@ $('#pic4_4').click(function(){
         xt=x;
         yt=y;
 
-        for (var i =0; i < 4; i++) {
-            for (var j = 0; j < 4; j++) {
+        for (var i =0; i < 5; i++) {
+            for (var j = 0; j < 7; j++) {
                 xt =x-2+j;
                 yt=y-2+i;
 
@@ -201,8 +202,8 @@ function movemap(){
     y=y-up+down;
     var yt;
     var xt;
-    for (var i = 0; i < 4; i++) {
-        for (var j = 0; j < 4; j++) {
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 7; j++) {
             xt=x+j-2;
             yt=y+i-2;
             $("#pic" + i + "_" + j).empty();
@@ -223,16 +224,8 @@ function movemap(){
 
 
 }
-function clickMove(s){
-    if(s=="up"){
-        vv.scrollTop = vv.scrollTop-100;
-    }else if(s=="down"){
-        vv.scrollTop = vv.scrollTop+100;
-    }else if(s=="left"){
-        vv.scrollLeft = vv.scrollLeft-100;
-    }else if(s=="right"){
-        vv.scrollLeft = vv.scrollLeft+100;
-    }
-}
+
+
+
 
 
