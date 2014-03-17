@@ -4,7 +4,6 @@
     <list default="true" id="91c6ef45-bae1-4ec0-9ac3-e30e834b3d2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarineMap.html" afterPath="$PROJECT_DIR$/MarineMap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/map.css" afterPath="$PROJECT_DIR$/css/map.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/map.js" afterPath="$PROJECT_DIR$/javascript/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ctticMap.iws" />
@@ -28,37 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MarineMap.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MarineMap.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarineMap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="6" selection-start="1061" selection-end="1116" vertical-scroll-proportion="0.60755813" vertical-offset="0" max-vertical-offset="2926">
+            <state line="99" column="19" selection-start="4101" selection-end="4102" vertical-scroll-proportion="-17.642857" vertical-offset="1387" max-vertical-offset="2926">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="map.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/map.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="46" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="position.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/position.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="position.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/position.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1558">
+            <state line="8" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="0.26480836" vertical-offset="0" max-vertical-offset="574">
               <folding />
             </state>
           </provider>
@@ -67,7 +48,7 @@
       <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="5" selection-start="1739" selection-end="1739" vertical-scroll-proportion="-20.5" vertical-offset="376" max-vertical-offset="1140">
+            <state line="54" column="5" selection-start="1782" selection-end="1782" vertical-scroll-proportion="-15.428572" vertical-offset="594" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -92,14 +73,8 @@
       <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="24" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="4769">
-              <folding>
-                <marker date="1395047297746" expanded="false" signature="625:647" placeholder="..." />
-                <marker date="1395047297746" expanded="true" signature="1919:1941" placeholder="..." />
-                <marker date="1395047297746" expanded="true" signature="2766:2789" placeholder="..." />
-                <marker date="1395047297746" expanded="true" signature="3645:3667" placeholder="..." />
-                <marker date="1395047297746" expanded="true" signature="4534:4556" placeholder="..." />
-              </folding>
+            <state line="142" column="24" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.0" vertical-offset="2698" max-vertical-offset="4769">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,16 +121,16 @@
         <option value="$PROJECT_DIR$/css/position.css" />
         <option value="$PROJECT_DIR$/javascript/position.js" />
         <option value="$PROJECT_DIR$/javascript/map.js" />
-        <option value="$PROJECT_DIR$/css/map.css" />
         <option value="$PROJECT_DIR$/MarineMap.html" />
+        <option value="$PROJECT_DIR$/css/map.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -197,7 +172,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CTTIC-MarineMap" />
+              <option name="myItemId" value="ctticMap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -207,7 +182,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CTTIC-MarineMap" />
+              <option name="myItemId" value="ctticMap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -221,21 +196,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CTTIC-MarineMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CTTIC-MarineMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CTTIC-MarineMap" />
+              <option name="myItemId" value="ctticMap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -260,14 +221,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -276,6 +229,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -321,14 +282,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.6705491" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19955324" sideWeight="0.6705491" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -357,16 +318,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2034" column="19" selection-start="36037" selection-end="36037" vertical-scroll-proportion="0.0" vertical-offset="38455" max-vertical-offset="41268">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="19" selection-start="4894" selection-end="4954" vertical-scroll-proportion="0.0" vertical-offset="4426" max-vertical-offset="20064">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
-          <folding>
-            <marker date="1395047297746" expanded="false" signature="625:647" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="1919:1941" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="2766:2789" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="3645:3667" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="4534:4556" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -385,13 +354,7 @@
     <entry file="file://$PROJECT_DIR$/javascript/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
-          <folding>
-            <marker date="1395047297746" expanded="false" signature="625:647" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="1919:1941" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="2766:2789" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="3645:3667" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="4534:4556" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -431,50 +394,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="5" selection-start="1739" selection-end="1739" vertical-scroll-proportion="-20.5" vertical-offset="376" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/map.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="46" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/position.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="24" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="4769">
-          <folding>
-            <marker date="1395047297746" expanded="false" signature="625:647" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="1919:1941" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="2766:2789" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="3645:3667" placeholder="..." />
-            <marker date="1395047297746" expanded="true" signature="4534:4556" placeholder="..." />
-          </folding>
+        <state line="142" column="24" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.0" vertical-offset="2698" max-vertical-offset="4769">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/position.js">
+    <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1558">
+        <state line="54" column="5" selection-start="1782" selection-end="1782" vertical-scroll-proportion="-15.428572" vertical-offset="594" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MarineMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="1061" selection-end="1116" vertical-scroll-proportion="0.60755813" vertical-offset="0" max-vertical-offset="2926">
+        <state line="99" column="19" selection-start="4101" selection-end="4102" vertical-scroll-proportion="-17.642857" vertical-offset="1387" max-vertical-offset="2926">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="0.26480836" vertical-offset="0" max-vertical-offset="574">
           <folding />
         </state>
       </provider>
