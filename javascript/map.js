@@ -25,12 +25,12 @@ $(function () {
      */
     var x1;
     var y1;
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 9; j++) {
             x1=j+x-4;
             y1=y+i-2;
-            var image = "<img  style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x1 + "&y=" + y1 + "&z=" + z + "'>";
-            $("#pic" + i + "_" + j).append(image);
+            var image = "<img id='img"+i+"_"+j+"'  style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + x1 + "&y=" + y1 + "&z=" + z + "'>";
+            $("#2pic" + i + "_" + j).append(image);
             //$("#pic" + i + "_" + j).click(big());
         }
     }
@@ -81,46 +81,16 @@ $(function () {
 
     });
 
-$('#pic4_4').click(function(){
-    p=p+10;
-    $("#zoom").css("width",p+"%");
-    if(p>0 && p<90){
-        var xt;
-        var yt;
-
-        z=z+1;
-        x=x*2;
-        y=y*2;
-        xt=x;
-        yt=y;
-
-        for (var i =0; i < 5; i++) {
-            for (var j = 0; j < 7; j++) {
-                xt =x-2+j;
-                yt=y-2+i;
-
-                $("#pic" + i + "_" + j).empty();
-                var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
-                document.getElementById("pic" + i + "_" + j).onload = function() {alert(1);};
-                $("#pic" + i + "_" + j).append(image);
-                //$("#pic" + i + "_" + j).click(big());
-            }
-        }
+    $(window).bind('mousewheel', function(event, delta) {
+      /*alert(delta);*/
+        if(delta>0)
+        {zoomin();}
+        if(delta<0)
+        {zoomout();}
+    });
 
 
-    }
-    else
-    {
-        p=80;
-        $("#zoom").css("width",p+"%");
-    }
 
-    $("#getx").attr("value",x);
-    $("#gety").attr("value",y);
-    $("#getz").attr("value",z);
-
-
-});
 
 
 });
@@ -132,13 +102,16 @@ function movemap(){
     y=y-up+down;
     var yt;
     var xt;
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 9; j++) {
             xt=x+j-4;
             yt=y+i-2;
-            $("#pic" + i + "_" + j).empty();
+            $("#2pic" + i + "_" + j).fadeOut("slow");
+            $("#2pic" + i + "_" + j).empty();
             var image = "<img style='width:100%;height:100%;' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" + xt + "&y=" + yt + "&z=" + z + "'>";
-            $("#pic" + i + "_" + j).append(image);
+            $("#2pic" + i + "_" + j).fadeIn("slow");
+            $("#2pic" + i + "_" + j).append(image);
+
             // $("#img" + i + "_" + j).fadeIn(500);
             //$("#pic" + i + "_" + j).click(big());
         }
@@ -156,10 +129,23 @@ function movemap(){
 }
 
 
+function loadImage(url, callback) {
+    var img = new Image(); //创建一个Image对象，实现图片的预下载
+    img.src = 'http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "';
+    img.height="100%";
+
+    if(img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+        callback.call(img);
+        return; // 直接返回，不用再处理onload事件
+    }
+    img.onload = function () { //图片下载完毕时异步调用callback函数。
+        callback.call(img);//将回调函数的this替换为Image对象
+    };
+};
 
 function zoomin(){
    p=p+10;
-    $("#zoom").css("width",p+"%");
+
     if(p>0 && p<90){
         var xt;
         var yt;
@@ -170,14 +156,23 @@ function zoomin(){
         xt=x;
         yt=y;
 
-        for (var i =0; i < 5; i++) {
+
+        for (var i =0; i < 4; i++) {
             for (var j = 0; j < 9; j++) {
                 xt =x-4+j;
                 yt=y-2+i;
 
-                $("#pic" + i + "_" + j).empty();
-                var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
-                $("#pic" + i + "_" + j).append(image);
+
+                $("#zoom").css("width",p+"%");
+                $("#2pic" + i + "_" + j).fadeOut("normal");
+                $("#2pic" + i + "_" + j).empty();
+
+                var image = "<img id='img"+i+"_"+j+"'style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
+
+                $("#2pic" + i + "_" + j).fadeIn("slow");
+                $("#2pic" + i + "_" + j).append(image);
+
+
                 //$("#pic" + i + "_" + j).click(big());
             }
         }
@@ -207,14 +202,19 @@ function zoomout(){
         x=parseInt(x/2);
         y=parseInt(y/2);
 
-        for (var i =0; i < 5; i++) {
+        for (var i =0; i < 4; i++) {
             for (var j = 0; j < 9; j++) {
                 xt=x+j-4;
                 yt=y+i-2;
-
-                $("#pic" + i + "_" + j).empty();
                 var image = "<img style='width:100%;height:100%' src='http://map.ctrack.com.cn/UserMapSvr/UM_Maping?version=1.0&type=chart&x=" +xt+ "&y=" +yt+ "&z=" + z + "'>";
-                $("#pic" + i + "_" + j).append(image);
+                $("#2pic" + i + "_" + j).fadeOut("slow",function(){
+                   $(this).empty();
+                    $(this).append(image);
+
+                    $(this).show();
+
+                });
+
                 // $("#pic" + i + "_" + j).fadeIn(500);
                 //$("#pic" + i + "_" + j).click(big());
             }
