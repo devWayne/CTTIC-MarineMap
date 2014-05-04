@@ -1,8 +1,0 @@
-
-#contral{ position: absolute;z-index:10; top:150px;}
-#contral img{ width:auto; margin:auto; cursor:auto; width:20px; border:0px;}
-#contral ul{width: 120px;}
-#contral li{width:26px; height:26px; float:left; list-style:none;}
-.pic{width:10%; float: left}
-.local{ position: relative;z-index:1}
-.logo{position: absolute;z-index:100;}
